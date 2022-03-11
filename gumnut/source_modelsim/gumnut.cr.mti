@@ -1,0 +1,64 @@
+C:/Users/Matias/Documents/VHDL/gumnut/test.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/test.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling entity test
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package gumnut_defs
+-- Compiling architecture gumnut of test
+-- Compiling configuration test_gumnut_rtl_unpipelined
+-- Loading entity test
+-- Loading architecture gumnut of test
+-- Loading entity gumnut_with_mem
+-- Loading architecture struct of gumnut_with_mem
+-- Loading entity gumnut
+-- Loading entity inst_mem
+-- Loading entity data_mem
+
+} {} {}} C:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity inst_mem
+
+} {} {}} C:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package gumnut_defs
+-- Compiling entity gumnut
+-- Compiling architecture rtl_unpipelined of gumnut
+
+} {} {}} C:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity data_mem
+
+} {} {}} C:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package gumnut_defs
+-- Compiling package body gumnut_defs
+-- Loading package gumnut_defs
+
+} {} {}} C:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity gumnut_with_mem
+-- Compiling architecture struct of gumnut_with_mem
+
+} {} {}}
