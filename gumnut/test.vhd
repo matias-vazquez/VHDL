@@ -120,16 +120,16 @@ port map ( clk_i => syscon_clk_o,
 
 end architecture gumnut;
 
-configuration test_gumnut_behavior of test is
+configuration test_gumnut_rtl_unpipelined of test is
 	for gumnut
 		for dut : gumnut_with_mem
 			use entity work.gumnut_with_mem(struct);
 			for struct
 				for core : gumnut
-					use entity work.gumnut(behavior)
+					use entity work.gumnut(rtl_unpipelined)
 					generic map ( debug => true );
 				end for;
 			end for;
 		end for;
 	end for;
-end configuration test_gumnut_behavior;
+end configuration test_gumnut_rtl_unpipelined;

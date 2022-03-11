@@ -14,78 +14,78 @@ w1646174588
 Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 106
-Z3 dC:/Users/Matias/Documents/Quartus/Gumnut
-8C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd
-FC:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd
+!i122 144
+Z3 dC:/Users/Matias/Documents/VHDL/gumnut
+8C:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd
+FC:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd
 l0
 L3 1
 VSJda;HFi[lzaeKH<kejC^0
 !s100 Vb<1@g]0dGUFR_0B0B_Z33
 Z4 OV;C;2020.1;71
 33
-Z5 !s110 1647028439
+!s110 1647033071
 !i10b 1
-Z6 !s108 1647028439.000000
-!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd|
-!s107 C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd|
+Z5 !s108 1647033071.000000
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd|
+!s107 C:/Users/Matias/Documents/VHDL/gumnut/data_mem.vhd|
 !i113 1
-Z7 o-work work -2008 -explicit
-Z8 tExplicit 1 CvgOpt 0
+Z6 o-work work -2008 -explicit
+Z7 tExplicit 1 CvgOpt 0
 Egumnut
-Z9 w1647022833
-Z10 DPx4 work 11 gumnut_defs 0 22 m:UPDSl]aeWA8J=Cj^mIR2
+Z8 w1647028448
+Z9 DPx4 work 11 gumnut_defs 0 22 m:UPDSl]aeWA8J=Cj^mIR2
 R0
 R1
 R2
-!i122 104
+!i122 145
 R3
-Z11 8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd
-Z12 FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd
+Z10 8C:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd
+Z11 FC:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd
 l0
 L5 1
 VK<kmndIPl90?00lNT55lN2
 !s100 9kLIkE0<lA^7KcK;I1AH90
 R4
 33
-Z13 !s110 1647028438
+Z12 !s110 1647033072
 !i10b 1
-Z14 !s108 1647028438.000000
-Z15 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd|
-Z16 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd|
+R5
+Z13 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd|
+Z14 !s107 C:/Users/Matias/Documents/VHDL/gumnut/gumnut.vhd|
 !i113 1
+R6
 R7
-R8
 Artl_unpipelined
-R10
+R9
 R0
 R1
 R2
-Z17 DEx4 work 6 gumnut 0 22 K<kmndIPl90?00lNT55lN2
-!i122 104
+Z15 DEx4 work 6 gumnut 0 22 K<kmndIPl90?00lNT55lN2
+!i122 145
 l80
 L39 386
-VcEja^7kzQ`V@P;3N8Y@><2
-!s100 I?Pe_LD0=zPNkmKSfVg5>0
+V:]i[c6A8QU>?NSe>mbW2;0
+!s100 acCaRHgzQ=HAPTh?bT3ab1
 R4
 33
-R13
+R12
 !i10b 1
+R5
+R13
 R14
-R15
-R16
 !i113 1
+R6
 R7
-R8
 Pgumnut_defs
 R0
 R1
 R2
-!i122 108
-w1646775332
+!i122 146
+Z16 w1647033064
 R3
-8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd
-FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd
+Z17 8C:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd
+Z18 FC:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd
 l0
 L4 1
 Vm:UPDSl]aeWA8J=Cj^mIR2
@@ -93,149 +93,200 @@ Vm:UPDSl]aeWA8J=Cj^mIR2
 R4
 33
 b1
-R5
+R12
 !i10b 1
-R6
-!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd|
-!s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd|
+Z19 !s108 1647033072.000000
+Z20 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd|
+Z21 !s107 C:/Users/Matias/Documents/VHDL/gumnut/gumnut_defs.vhd|
 !i113 1
+R6
 R7
-R8
-Egumnut_with_mem
-Z18 w1646175186
+Bbody
+R9
 R0
 R1
 R2
-!i122 107
+!i122 146
+l0
+L79 1
+VKN9`DlG9_Q:Regb=ogedA0
+!s100 d;k5o[[J4N7b`WG9VD[KK1
+R4
+33
+R12
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R6
+R7
+Egumnut_with_mem
+Z22 w1646175186
+R0
+R1
+R2
+!i122 147
 R3
-Z19 8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd
-Z20 FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd
+Z23 8C:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd
+Z24 FC:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd
 l0
 L3 1
 VjDcZ6a`oVFBi3`NHSFnV51
 !s100 `3J0K9FZD5=RmiAf<z@:o3
 R4
 33
-R5
+R12
 !i10b 1
-R6
-Z21 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd|
-Z22 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd|
+R19
+Z25 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd|
+Z26 !s107 C:/Users/Matias/Documents/VHDL/gumnut/gumnut_with_mem.vhd|
 !i113 1
+R6
 R7
-R8
 Astruct
 R0
 R1
 R2
-Z23 DEx4 work 15 gumnut_with_mem 0 22 jDcZ6a`oVFBi3`NHSFnV51
-!i122 107
+Z27 DEx4 work 15 gumnut_with_mem 0 22 jDcZ6a`oVFBi3`NHSFnV51
+!i122 147
 l91
 L22 116
 Vjh1ei4;[k17ZL2hZ]`jcj2
 !s100 ?]^fP999cLZKkDC7LHhfN0
 R4
 33
-R5
+R12
 !i10b 1
-R6
-R21
-R22
+R19
+R25
+R26
 !i113 1
+R6
 R7
-R8
 Einst_mem
 w1646174416
 R0
 R1
 R2
-!i122 105
+!i122 148
 R3
-8C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd
-FC:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd
+8C:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd
+FC:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd
 l0
 L3 1
 VBfnAhEf2mfNU>FBRfEan]3
 !s100 [D3zZ4_YZ^8<g<o6LK8i90
 R4
 33
-R5
+R12
 !i10b 1
-R14
-!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd|
-!s107 C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd|
+R19
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd|
+!s107 C:/Users/Matias/Documents/VHDL/gumnut/inst_mem.vhd|
 !i113 1
+R6
 R7
-R8
 Etest
-Z24 w1647024289
-!i122 109
+Z28 w1647031792
+!i122 149
 R3
-Z25 8C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd
-Z26 FC:/Users/Matias/Documents/Quartus/Gumnut/test.vhd
+Z29 8C:/Users/Matias/Documents/VHDL/gumnut/test.vhd
+Z30 FC:/Users/Matias/Documents/VHDL/gumnut/test.vhd
 l0
 L1 1
 V1?I2RTZ8ECJ^JHdTS@]MP3
 !s100 0m7HI4F_nQB8g7lhz`_?Y1
 R4
 33
-R5
+Z31 !s110 1647033073
 !i10b 1
-R6
-Z27 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd|
-Z28 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd|
+Z32 !s108 1647033073.000000
+Z33 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/VHDL/gumnut/test.vhd|
+Z34 !s107 C:/Users/Matias/Documents/VHDL/gumnut/test.vhd|
 !i113 1
+R6
 R7
-R8
 Agumnut
-Z29 DEx4 work 4 test 0 22 1?I2RTZ8ECJ^JHdTS@]MP3
-R10
+Z35 DEx4 work 4 test 0 22 1?I2RTZ8ECJ^JHdTS@]MP3
+R9
 R0
 R1
 R2
-!i122 109
+!i122 149
 l40
-Z30 L9 113
-Z31 V[NZ[13C8bVGled^_D;ob40
-Z32 !s100 VA3H]z5oKnhoK?KVHh__z1
+Z36 L9 113
+Z37 V[NZ[13C8bVGled^_D;ob40
+Z38 !s100 VA3H]z5oKnhoK?KVHh__z1
 R4
 33
-R5
+R31
 !i10b 1
-R6
-R27
-R28
+R32
+R33
+R34
 !i113 1
+R6
 R7
-R8
 Ctest_gumnut_behavior
-etest
-agumnut
-R17
-DAx4 work 15 gumnut_with_mem 6 struct 22 jh1ei4;[k17ZL2hZ]`jcj2
-R23
-R10
+Z39 etest
+Z40 agumnut
+R15
+DAx4 work 15 gumnut_with_mem 6 struct 22 Ua[BgzZ]0`_j^EVY@:Ai10
+DEx4 work 15 gumnut_with_mem 0 22 0S9^;@zghQIVC6J^62^PM3
+DPx4 work 11 gumnut_defs 0 22 RX9IZ8zY7KYRZ8Bo?WIO=0
 R0
 R1
 R2
-DAx4 work 4 test 6 gumnut 22 [NZ[13C8bVGled^_D;ob40
-R29
-!i122 109
-R24
+Z41 DAx4 work 4 test 6 gumnut 22 [NZ[13C8bVGled^_D;ob40
+R35
+!i122 121
+w1647024289
 R3
-R25
-R26
+R29
+R30
 l0
-L123 1
+Z42 L123 1
 Vc:Nb9dVR?646:5MYCMeQb3
 !s100 n4DfaHnoI1YKzSj2JAZX:2
 R4
 33
-R5
+!s110 1647031477
 !i10b 1
-R6
-R27
-R28
+!s108 1647031477.000000
+R33
+R34
 !i113 1
+R6
 R7
-R8
+Ctest_gumnut_rtl_unpipelined
+R39
+R40
+R15
+DAx4 work 15 gumnut_with_mem 6 struct 22 jh1ei4;[k17ZL2hZ]`jcj2
+R27
+R9
+R0
+R1
+R2
+R41
+R35
+!i122 149
+R28
+R3
+R29
+R30
+l0
+R42
+VzI_Hh9iVgOUkY4Sg7Q>gh1
+!s100 ajY:?F]z@9eHf8Fd?NcTA3
+R4
+33
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R6
+R7

@@ -77,20 +77,18 @@ package gumnut_defs is
 end package gumnut_defs;
 
 package body gumnut_defs is
-procedure disassemble ( instr : instruction; result : out disassembled_instruction ) is
+procedure disassemble ( instr : instruction;
+	result : out disassembled_instruction ) is
 	
 	subtype name is string(1 to 4);
-	
 	type name_table is array (natural range <>) of name;
-	
-	constant alu_name_table : name_table(0 to 7) := ( 0 => "add ", 1 => "addc", 2 => "sub ", 3 => "subc", 4 => "and ", 5 => "or ", 6 => "xor ", 7 => "msk " );
+	constant alu_name_table : name_table(0 to 7) := ( 0 => "add ", 1 => "addc", 2 => "sub ", 3 => "subc", 4 => "and ", 5 => "or  ", 6 => "xor ", 7 => "msk " );
 	constant shift_name_table : name_table(0 to 3) := ( 0 => "shl ", 1 => "shr ", 2 => "rol ", 3 => "ror " );
 	constant mem_name_table : name_table(0 to 3) := ( 0 => "ldm ", 1 => "stm ", 2 => "inp ", 3 => "out " );
 	constant branch_name_table : name_table(0 to 3) := ( 0 => "bz ", 1 => "bnz ", 2 => "bc ", 3 => "bnc " );
 	constant jump_name_table : name_table(0 to 1) := ( 0 => "jmp ", 1 => "jsb " );
 	constant misc_name_table : name_table(0 to 7) := ( 0 => "ret ", 1 => "reti", 2 => "enai", 3 => "disi", 4 => "wait", 5 => "stby", 6 => "um_6", 7 => "um_7" );
-
-	variable instr_01 : instruction := to_01(instr);
+	variable instr_01 : instruction := to_01(instr); 
 	alias instr_alu_reg_fn : alu_fn_code is instr_01(2 downto 0);
 	alias instr_alu_immed_fn : alu_fn_code is instr_01(16 downto 14);
 	alias instr_shift_fn : shift_fn_code is instr_01(1 downto 0);
@@ -107,91 +105,94 @@ procedure disassemble ( instr : instruction; result : out disassembled_instructi
 	alias instr_disp : disp is instr_01(7 downto 0);
 	alias instr_addr : IMem_addr is instr_01(11 downto 0);
 
-procedure disassemble_reg ( reg : reg_addr; index : positive ) is
-	constant str : string := to_string(to_integer(reg));
+	procedure disassemble_reg ( reg : reg_addr;
+		index : positive ) is
+		
+		constant str : string := to_string(to_integer(reg));
+		begin
+			result(index) := str(str'left);
+	end procedure disassemble_reg;
+
+	procedure disassemble_unsigned ( n : unsigned;
+		index : positive ) is
+
+		constant str : string := to_string(to_integer(n));
+		begin	
+			result(index to index + str'length - 1) := str;
+	end procedure disassemble_unsigned;
+
+	procedure disassemble_signed ( n : signed;
+		index : positive ) is
+
+		constant str : string := to_string(to_integer(n));
+		begin
+			result(index to index + str'length - 1) := str;
+	end procedure disassemble_signed;
+
+	procedure disassemble_effective_addr ( r : reg_addr;
+		d : offset;
+		index : positive ) is
+
+		constant signed_str : string := to_string(to_integer(signed(d)));
+		constant unsigned_str : string := to_string(to_integer(d));
+		begin
+			if r = 0 then
+				result(index to index + unsigned_str'length - 1) := unsigned_str;
+			else
+				result(index to index + 3) := "(r )";
+				disassemble_reg(r, index + 2);
+				result(index + 4 to index + 4 + signed_str'length - 1) := signed_str;
+			end if;
+	end procedure disassemble_effective_addr;
 	begin
-result(index) := str(str'left);
-end procedure disassemble_reg;
-procedure disassemble_unsigned ( n : unsigned;
-index : positive ) is
-constant str : string := to_string(to_integer(n));
-begin
-result(index to index + str'length - 1) := str;
-end procedure disassemble_unsigned;
-procedure disassemble_signed ( n : signed;
-index : positive ) is
-constant str : string := to_string(to_integer(n));
-begin
-result(index to index + str'length - 1) := str;
-end procedure disassemble_signed;
-procedure disassemble_effective_addr ( r : reg_addr;
-d : offset;
-index : positive ) is
-constant signed_str : string
-:= to_string(to_integer(signed(d)));
-constant unsigned_str : string
-:= to_string(to_integer(d));
-begin
-if r = 0 then
-result(index to index + unsigned_str'length - 1)
-:= unsigned_str;
-else
-result(index to index + 3) := "(r )";
-disassemble_reg(r, index + 2);
-result(index + 4 to index + 4 + signed_str'length - 1)
-:= signed_str;
-end if;
-end procedure disassemble_effective_addr;
-
-begin
-	if is_X(instr) then
-		report "disassemble: metalogical value in instruction word" severity error;
-		result := (others => 'X');
-		return;
-	end if;
-
-	result := (others => ' ');
-if instr_01(17) = '0' then
--- Arithmetic/Logical Immediate
-result(1 to name'length) := alu_name_table(to_integer(instr_alu_immed_fn));
-result(name'length + 2 to name'length + 8) := "R , R ,";
-disassemble_reg(instr_rd, name'length + 3);
-disassemble_reg(instr_rs, name'length + 7);
-disassemble_unsigned(instr_immed, name'length + 10);
-elsif instr_01(16) = '0' then
--- Memory I/O
-result(1 to name'length) := mem_name_table(to_integer(instr_mem_fn));
-result(name'length + 2 to name'length + 4) := "R ,";
-disassemble_reg(instr_rd, name'length + 3);
-disassemble_effective_addr(instr_rs,
-instr_offset, name'length + 6);
-elsif instr_01(15) = '0' then
--- Shift
-result(1 to name'length) := shift_name_table(to_integer(instr_shift_fn));
-result(name'length + 2 to name'length + 8) := "R , R ,";
-disassemble_reg(instr_rd, name'length + 3);
-disassemble_reg(instr_rs, name'length + 7);
-disassemble_unsigned(instr_count, name'length + 10);
-elsif instr_01(14) = '0' then
--- Arithmetic/Logical Register
-result(1 to name'length) := alu_name_table(to_integer(instr_alu_reg_fn));
-result(name'length + 2 to name'length + 10) := "R , R , R";
-disassemble_reg(instr_rd, name'length + 3);
-disassemble_reg(instr_rs, name'length + 7);
-disassemble_reg(instr_r2, name'length + 11);
-elsif instr_01(13) = '0' then
--- Jump
-result(1 to name'length) := jump_name_table(to_integer(instr_jump_fn));
-disassemble_unsigned(instr_addr, name'length + 2);
-elsif instr_01(12) = '0' then
--- Branch
-result(1 to name'length) := branch_name_table(to_integer(instr_branch_fn));
-disassemble_signed(signed(instr_disp), name'length + 2);
-elsif instr_01(11) = '0' then
--- Miscellaneous
-result(1 to name'length) := misc_name_table(to_integer(instr_misc_fn));
-else
-result(1 to 19) := "Illegal Instruction";
-end if;
-end procedure disassemble;
+		if is_X(instr) then
+			report "disassemble: metalogical value in instruction word"
+			severity error;
+			result := (others => 'X');
+			return;
+		end if;
+		result := (others => ' ');
+		if instr_01(17) = '0' then
+			-- Arithmetic/Logical Immediate
+			result(1 to name'length) := alu_name_table(to_integer(instr_alu_immed_fn));
+			result(name'length + 2 to name'length + 8) := "R , R ,";
+			disassemble_reg(instr_rd, name'length + 3);
+			disassemble_reg(instr_rs, name'length + 7);
+			disassemble_unsigned(instr_immed, name'length + 10);
+		elsif instr_01(16) = '0' then
+			-- Memory I/O
+			result(1 to name'length) := mem_name_table(to_integer(instr_mem_fn));
+			result(name'length + 2 to name'length + 4) := "R ,";
+			disassemble_reg(instr_rd, name'length + 3);
+			disassemble_effective_addr(instr_rs,
+			instr_offset, name'length + 6);
+		elsif instr_01(15) = '0' then
+			-- Shift
+			result(1 to name'length) := shift_name_table(to_integer(instr_shift_fn));
+			result(name'length + 2 to name'length + 8) := "R , R ,";
+			disassemble_reg(instr_rd, name'length + 3);
+			disassemble_reg(instr_rs, name'length + 7);
+			disassemble_unsigned(instr_count, name'length + 10);
+		elsif instr_01(14) = '0' then
+			-- Arithmetic/Logical Register
+			result(1 to name'length) := alu_name_table(to_integer(instr_alu_reg_fn));
+			result(name'length + 2 to name'length + 10) := "R , R , R";
+			disassemble_reg(instr_rd, name'length + 3);
+			disassemble_reg(instr_rs, name'length + 7);
+			disassemble_reg(instr_r2, name'length + 11);
+		elsif instr_01(13) = '0' then
+			-- Jump
+			result(1 to name'length) := jump_name_table(to_integer(instr_jump_fn));
+			disassemble_unsigned(instr_addr, name'length + 2);
+		elsif instr_01(12) = '0' then
+			-- Branch
+			result(1 to name'length) := branch_name_table(to_integer(instr_branch_fn));
+			disassemble_signed(signed(instr_disp), name'length + 2);
+		elsif instr_01(11) = '0' then
+			-- Miscellaneous
+			result(1 to name'length) := misc_name_table(to_integer(instr_misc_fn));
+		else
+			result(1 to 19) := "Illegal Instruction";
+		end if;
+	end procedure disassemble;
 end package body gumnut_defs;
