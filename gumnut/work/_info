@@ -1,0 +1,241 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+Edata_mem
+w1646174588
+Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 106
+Z3 dC:/Users/Matias/Documents/Quartus/Gumnut
+8C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd
+FC:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd
+l0
+L3 1
+VSJda;HFi[lzaeKH<kejC^0
+!s100 Vb<1@g]0dGUFR_0B0B_Z33
+Z4 OV;C;2020.1;71
+33
+Z5 !s110 1647028439
+!i10b 1
+Z6 !s108 1647028439.000000
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd|
+!s107 C:/Users/Matias/Documents/Quartus/Gumnut/data_mem.vhd|
+!i113 1
+Z7 o-work work -2008 -explicit
+Z8 tExplicit 1 CvgOpt 0
+Egumnut
+Z9 w1647022833
+Z10 DPx4 work 11 gumnut_defs 0 22 m:UPDSl]aeWA8J=Cj^mIR2
+R0
+R1
+R2
+!i122 104
+R3
+Z11 8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd
+Z12 FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd
+l0
+L5 1
+VK<kmndIPl90?00lNT55lN2
+!s100 9kLIkE0<lA^7KcK;I1AH90
+R4
+33
+Z13 !s110 1647028438
+!i10b 1
+Z14 !s108 1647028438.000000
+Z15 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd|
+Z16 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut.vhd|
+!i113 1
+R7
+R8
+Artl_unpipelined
+R10
+R0
+R1
+R2
+Z17 DEx4 work 6 gumnut 0 22 K<kmndIPl90?00lNT55lN2
+!i122 104
+l80
+L39 386
+VcEja^7kzQ`V@P;3N8Y@><2
+!s100 I?Pe_LD0=zPNkmKSfVg5>0
+R4
+33
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R7
+R8
+Pgumnut_defs
+R0
+R1
+R2
+!i122 108
+w1646775332
+R3
+8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd
+FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd
+l0
+L4 1
+Vm:UPDSl]aeWA8J=Cj^mIR2
+!s100 koKU_InRb7NbD8IG?n_iZ3
+R4
+33
+b1
+R5
+!i10b 1
+R6
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd|
+!s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_defs.vhd|
+!i113 1
+R7
+R8
+Egumnut_with_mem
+Z18 w1646175186
+R0
+R1
+R2
+!i122 107
+R3
+Z19 8C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd
+Z20 FC:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd
+l0
+L3 1
+VjDcZ6a`oVFBi3`NHSFnV51
+!s100 `3J0K9FZD5=RmiAf<z@:o3
+R4
+33
+R5
+!i10b 1
+R6
+Z21 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd|
+Z22 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/gumnut_with_mem.vhd|
+!i113 1
+R7
+R8
+Astruct
+R0
+R1
+R2
+Z23 DEx4 work 15 gumnut_with_mem 0 22 jDcZ6a`oVFBi3`NHSFnV51
+!i122 107
+l91
+L22 116
+Vjh1ei4;[k17ZL2hZ]`jcj2
+!s100 ?]^fP999cLZKkDC7LHhfN0
+R4
+33
+R5
+!i10b 1
+R6
+R21
+R22
+!i113 1
+R7
+R8
+Einst_mem
+w1646174416
+R0
+R1
+R2
+!i122 105
+R3
+8C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd
+FC:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd
+l0
+L3 1
+VBfnAhEf2mfNU>FBRfEan]3
+!s100 [D3zZ4_YZ^8<g<o6LK8i90
+R4
+33
+R5
+!i10b 1
+R14
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd|
+!s107 C:/Users/Matias/Documents/Quartus/Gumnut/inst_mem.vhd|
+!i113 1
+R7
+R8
+Etest
+Z24 w1647024289
+!i122 109
+R3
+Z25 8C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd
+Z26 FC:/Users/Matias/Documents/Quartus/Gumnut/test.vhd
+l0
+L1 1
+V1?I2RTZ8ECJ^JHdTS@]MP3
+!s100 0m7HI4F_nQB8g7lhz`_?Y1
+R4
+33
+R5
+!i10b 1
+R6
+Z27 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd|
+Z28 !s107 C:/Users/Matias/Documents/Quartus/Gumnut/test.vhd|
+!i113 1
+R7
+R8
+Agumnut
+Z29 DEx4 work 4 test 0 22 1?I2RTZ8ECJ^JHdTS@]MP3
+R10
+R0
+R1
+R2
+!i122 109
+l40
+Z30 L9 113
+Z31 V[NZ[13C8bVGled^_D;ob40
+Z32 !s100 VA3H]z5oKnhoK?KVHh__z1
+R4
+33
+R5
+!i10b 1
+R6
+R27
+R28
+!i113 1
+R7
+R8
+Ctest_gumnut_behavior
+etest
+agumnut
+R17
+DAx4 work 15 gumnut_with_mem 6 struct 22 jh1ei4;[k17ZL2hZ]`jcj2
+R23
+R10
+R0
+R1
+R2
+DAx4 work 4 test 6 gumnut 22 [NZ[13C8bVGled^_D;ob40
+R29
+!i122 109
+R24
+R3
+R25
+R26
+l0
+L123 1
+Vc:Nb9dVR?646:5MYCMeQb3
+!s100 n4DfaHnoI1YKzSj2JAZX:2
+R4
+33
+R5
+!i10b 1
+R6
+R27
+R28
+!i113 1
+R7
+R8
