@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gumnut
-Mon Mar 14 15:54:59 2022
+Tue Mar 15 14:21:19 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |gumnut|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |gumnut
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +47,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Mar 14 15:54:59 2022           ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 15 14:21:19 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; gumnut                                      ;
 ; Top-level Entity Name              ; gumnut                                      ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 676                                         ;
+;     Total combinational functions  ; 628                                         ;
+;     Dedicated logic registers      ; 268                                         ;
+; Total registers                    ; 268                                         ;
+; Total pins                         ; 93                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -151,11 +161,176 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++-----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++-----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; source/gumnut-rtl_unpipelined.vhd ; yes             ; User VHDL File  ; C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut-rtl_unpipelined.vhd ;         ;
+; source/gumnut_defs.vhd            ; yes             ; User VHDL File  ; C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_defs.vhd            ;         ;
+; source/gumnut.vhd                 ; yes             ; User VHDL File  ; C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut.vhd                 ;         ;
++-----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 676         ;
+;                                             ;             ;
+; Total combinational functions               ; 628         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 315         ;
+;     -- 3 input functions                    ; 274         ;
+;     -- <=2 input functions                  ; 39          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 592         ;
+;     -- arithmetic mode                      ; 36          ;
+;                                             ;             ;
+; Total registers                             ; 268         ;
+;     -- Dedicated logic registers            ; 268         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 93          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clk_i~input ;
+; Maximum fan-out                             ; 268         ;
+; Total fan-out                               ; 3023        ;
+; Average fan-out                             ; 2.79        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |gumnut                    ; 628 (628)           ; 268 (268)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 93   ; 0            ; 0          ; |gumnut             ; gumnut      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |gumnut|state                                                                                                                      ;
++------------------------+-----------------+------------------------+-----------------+---------------------+--------------------+-------------------+
+; Name                   ; state.int_state ; state.write_back_state ; state.mem_state ; state.execute_state ; state.decode_state ; state.fetch_state ;
++------------------------+-----------------+------------------------+-----------------+---------------------+--------------------+-------------------+
+; state.fetch_state      ; 0               ; 0                      ; 0               ; 0                   ; 0                  ; 0                 ;
+; state.decode_state     ; 0               ; 0                      ; 0               ; 0                   ; 1                  ; 1                 ;
+; state.execute_state    ; 0               ; 0                      ; 0               ; 1                   ; 0                  ; 1                 ;
+; state.mem_state        ; 0               ; 0                      ; 1               ; 0                   ; 0                  ; 1                 ;
+; state.write_back_state ; 0               ; 1                      ; 0               ; 0                   ; 0                  ; 1                 ;
+; state.int_state        ; 1               ; 0                      ; 0               ; 0                   ; 0                  ; 1                 ;
++------------------------+-----------------+------------------------+-----------------+---------------------+--------------------+-------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; \GPR_mem:GPR[0][7]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][6]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][5]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][4]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][3]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][2]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][1]                    ; Stuck at GND due to stuck port data_in ;
+; \GPR_mem:GPR[0][0]                    ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 268   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 80    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 106   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |gumnut|SP[2]              ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |gumnut|GPR_rs[0]          ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |gumnut|GPR_r2[5]          ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; Yes        ; |gumnut|PC[0]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |gumnut|fn                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |gumnut|write_data         ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |gumnut|ALU_result         ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |gumnut|ALU_result         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |gumnut ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; debug          ; false ; Enumerated                                    ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 93                          ;
+; cycloneiii_ff         ; 268                         ;
+;     CLR               ; 66                          ;
+;     ENA               ; 92                          ;
+;     ENA CLR           ; 14                          ;
+;     plain             ; 96                          ;
+; cycloneiii_lcell_comb ; 629                         ;
+;     arith             ; 36                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 35                          ;
+;     normal            ; 593                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 239                         ;
+;         4 data inputs ; 315                         ;
+;                       ;                             ;
+; Max LUT depth         ; 10.50                       ;
+; Average LUT depth     ; 6.42                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,30 +339,55 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Mar 14 15:54:47 2022
+    Info: Processing started: Tue Mar 15 14:21:03 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gumnut -c gumnut
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file source/inst_mem.vhd
-    Info (12022): Found design unit 1: inst_mem-xst File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/inst_mem.vhd Line: 16
-    Info (12023): Found entity 1: inst_mem File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/inst_mem.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file source/gumnut_with_mem.vhd
-    Info (12022): Found design unit 1: gumnut_with_mem-struct File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut_with_mem.vhd Line: 22
-    Info (12023): Found entity 1: gumnut_with_mem File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut_with_mem.vhd Line: 3
+Info (12021): Found 1 design units, including 0 entities, in source file source/inst_mem-xst.vhd
+    Info (12022): Found design unit 1: inst_mem-xst File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/inst_mem-xst.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file source/inst_mem-rtl.vhd
+    Info (12022): Found design unit 1: inst_mem-rtl File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/inst_mem-rtl.vhd Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file source/inst_mem.vhd
+    Info (12023): Found entity 1: inst_mem File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/inst_mem.vhd Line: 6
+Info (12021): Found 1 design units, including 0 entities, in source file source/gumnut-rtl_unpipelined.vhd
+    Info (12022): Found design unit 1: gumnut-rtl_unpipelined File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut-rtl_unpipelined.vhd Line: 5
+Info (12021): Found 1 design units, including 0 entities, in source file source/gumnut_with_mem-struct.vhd
+    Info (12022): Found design unit 1: gumnut_with_mem-struct File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_with_mem-struct.vhd Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file source/gumnut_with_mem.vhd
+    Info (12023): Found entity 1: gumnut_with_mem File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_with_mem.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file source/gumnut_system-top.vhd
+    Info (12022): Found design unit 1: gumnut_system-top File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_system-top.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file source/gumnut_system.vhd
+    Info (12023): Found entity 1: gumnut_system File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_system.vhd Line: 4
 Info (12021): Found 2 design units, including 0 entities, in source file source/gumnut_defs.vhd
-    Info (12022): Found design unit 1: gumnut_defs File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut_defs.vhd Line: 4
-    Info (12022): Found design unit 2: gumnut_defs-body File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut_defs.vhd Line: 79
-Info (12021): Found 2 design units, including 1 entities, in source file source/gumnut.vhd
-    Info (12022): Found design unit 1: gumnut-rtl_unpipelined File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut.vhd Line: 39
-    Info (12023): Found entity 1: gumnut File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file source/data_mem.vhd
-    Info (12022): Found design unit 1: data_mem-xst File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/data_mem.vhd Line: 19
-    Info (12023): Found entity 1: data_mem File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/data_mem.vhd Line: 3
-Error (10405): VHDL error at gumnut_defs.vhd(153): can't determine type of object at or near identifier "is_X" -- found 0 possible types File: C:/Users/Matias/Documents/VHDL/gumnut/quartus/source/gumnut_defs.vhd Line: 153
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4775 megabytes
-    Error: Processing ended: Mon Mar 14 15:54:59 2022
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:31
+    Info (12022): Found design unit 1: gumnut_defs File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_defs.vhd Line: 4
+    Info (12022): Found design unit 2: gumnut_defs-body File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut_defs.vhd Line: 85
+Info (12021): Found 1 design units, including 1 entities, in source file source/gumnut.vhd
+    Info (12023): Found entity 1: gumnut File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gumnut.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file source/gasm_text.vhd
+    Info (12022): Found design unit 1: gasm_text File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gasm_text.vhd Line: 3
+Info (12021): Found 1 design units, including 0 entities, in source file source/gasm_data.vhd
+    Info (12022): Found design unit 1: gasm_data File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/gasm_data.vhd Line: 3
+Info (12021): Found 1 design units, including 0 entities, in source file source/data_mem-xst.vhd
+    Info (12022): Found design unit 1: data_mem-xst File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/data_mem-xst.vhd Line: 4
+Info (12021): Found 1 design units, including 0 entities, in source file source/data_mem-rtl.vhd
+    Info (12022): Found design unit 1: data_mem-rtl File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/data_mem-rtl.vhd Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file source/data_mem.vhd
+    Info (12023): Found entity 1: data_mem File: C:/Users/Matias/Documents/VHDL/gumnut/ise/source/data_mem.vhd Line: 6
+Info (12127): Elaborating entity "gumnut" for the top level hierarchy
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "\stack_mem:stack" is uninferred due to inappropriate RAM size
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 937 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 40 input pins
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 844 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Tue Mar 15 14:21:19 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:35
 
 
