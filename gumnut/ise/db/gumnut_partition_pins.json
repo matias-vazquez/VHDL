@@ -1,0 +1,381 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "inst_cyc_o",
+					"strict" : false
+				},
+				{
+					"name" : "inst_stb_o",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_adr_o[11]",
+					"strict" : false
+				},
+				{
+					"name" : "data_cyc_o",
+					"strict" : false
+				},
+				{
+					"name" : "data_stb_o",
+					"strict" : false
+				},
+				{
+					"name" : "data_we_o",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_adr_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "port_cyc_o",
+					"strict" : false
+				},
+				{
+					"name" : "port_stb_o",
+					"strict" : false
+				},
+				{
+					"name" : "port_we_o",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "port_adr_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[2]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[3]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[4]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[5]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[6]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_o[7]",
+					"strict" : false
+				},
+				{
+					"name" : "int_ack",
+					"strict" : false
+				},
+				{
+					"name" : "inst_ack_i",
+					"strict" : false
+				},
+				{
+					"name" : "port_ack_i",
+					"strict" : false
+				},
+				{
+					"name" : "data_ack_i",
+					"strict" : false
+				},
+				{
+					"name" : "int_req",
+					"strict" : false
+				},
+				{
+					"name" : "clk_i",
+					"strict" : false
+				},
+				{
+					"name" : "rst_i",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[17]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inst_dat_i[8]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[7]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[4]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[3]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_dat_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "port_dat_i[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

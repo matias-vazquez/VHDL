@@ -1,0 +1,18 @@
+Fitter Status : Successful - Tue Mar 15 12:02:47 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : gumnut
+Top-level Entity Name : gumnut
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 654 / 49,760 ( 1 % )
+    Total combinational functions : 629 / 49,760 ( 1 % )
+    Dedicated logic registers : 268 / 49,760 ( < 1 % )
+Total registers : 268
+Total pins : 93 / 360 ( 26 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )
