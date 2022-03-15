@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Mar 15 12:02:47 2022
+Fitter Status : Successful - Tue Mar 15 14:21:50 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : gumnut
 Top-level Entity Name : gumnut
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 654 / 49,760 ( 1 % )
+Total logic elements : 652 / 49,760 ( 1 % )
     Total combinational functions : 629 / 49,760 ( 1 % )
     Dedicated logic registers : 268 / 49,760 ( < 1 % )
 Total registers : 268
